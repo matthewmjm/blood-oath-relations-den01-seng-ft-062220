@@ -10,14 +10,15 @@ require_relative '../app/models/follower.rb'
 
 
 
-
+#(name, location, founding_year, slogan)
 cult1 = Cult.new("Fluffy_Kitty_Cult", "Catland", 1999, "meow, meow, meow")
-cult2 = Cult.new("Little_Doggy_Cult", "Dogville", 1980, "ruff, ruff, ruff")
+cult2 = Cult.new("Little_Doggy_Cult", "Dogville", 1989, "ruff, ruff, ruff")
 cult3 = Cult.new("Flying_Bird_Cult", "Birdland", 2013, "tweet, tweet, tweet")
 cult4 = Cult.new("Grazying_Cow_Cult", "Cowfarm", 1989, "moo, moo, moo")
 cult5 = Cult.new("Jimminy_Cricket_Cult", "Bugville", 2011, "chirp, chirp, chirp")
+cult6 = Cult.new("Bees_Cult", "Bugville", 2020, "buzz, buzz, buzz")
 
-
+#(name, age, life_motto )
 follower1 = Follower.new("Edwin Powell", 24, "You need a good mottos to live by")
 follower2 = Follower.new("Frieda Robscheit", 29, "Good Enough Isn’t Good Enough")
 follower3 = Follower.new("Rosalind Franklin", 35, "Faster, Higher, Stronger")
@@ -29,7 +30,7 @@ follower8 = Follower.new("Johannes Kepler", 34, "Rome Was Not Built In A Day")
 follower9 = Follower.new("Ingrid Daubechies", 42, "Be The One To Light A Fire")
 follower10 = Follower.new("Niels Bohr", 33, "Now that's a Fire")
 
-
+#(cult, follower, initiation_date)
 oath1 = BloodOath.new(cult3, follower3, "2016-09-12") 
 oath2 = BloodOath.new(cult5, follower8, "2018-06-24")
 oath3 = BloodOath.new(cult3, follower4, "2015-04-13")
@@ -40,6 +41,9 @@ oath7 = BloodOath.new(cult1, follower6, "2018-06-24")
 oath8 = BloodOath.new(cult4, follower4, "2015-04-13")
 oath9 = BloodOath.new(cult4, follower5, "2020-03-16")
 oath10 = BloodOath.new(cult3, follower9, "2014-11-09")
+
+
+cult1.recruit_follower(follower5)
 
 binding.pry
 end_of_bloodoath = "game over"
