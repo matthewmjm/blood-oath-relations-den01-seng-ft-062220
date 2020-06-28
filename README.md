@@ -68,9 +68,9 @@ Questions you should ask yourself:
 * `Cult.find_by_name`
   * takes a `String` argument that is a name and returns a `Cult` instance whose name matches that argument- DONE
 * `Cult.find_by_location`
-  * takes a `String` argument that is a location and returns an `Array` of cults that are in that location
+  * takes a `String` argument that is a location and returns an `Array` of cults that are in that location - DONE
 * `Cult.find_by_founding_year`
-  * takes a `Fixnum` argument that is a year and returns all of the cults founded in that year
+  * takes a `Fixnum` argument that is a year and returns all of the cults founded in that year - DONE
 
 **`Follower`**
 
@@ -81,9 +81,9 @@ Questions you should ask yourself:
 * `Follower#life_motto`
   * returns a `String` that is the follower's life motto - DONE
 * `Follower#cults`
-  * returns an `Array` of this follower's cults
+  * returns an `Array` of this follower's cults - DONE
 * `Follower#join_cult`
-  * takes in an argument of a `Cult` instance and adds this follower to the cult's list of followers
+  * takes in an argument of a `Cult` instance and adds this follower to the cult's list of followers - DONE
 * `Follower.all`
   * returns an `Array` of all the followers - DONE
 * `Follower.of_a_certain_age`
