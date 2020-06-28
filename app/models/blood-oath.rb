@@ -15,4 +15,8 @@ class BloodOath
         @@all
     end
 
+    # def self.first_oath
+
+    # end
+
 end

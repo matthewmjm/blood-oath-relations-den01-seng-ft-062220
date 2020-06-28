@@ -36,14 +36,14 @@ oath2 = BloodOath.new(cult5, follower8, "2018-06-24")
 oath3 = BloodOath.new(cult3, follower4, "2015-04-13")
 oath4 = BloodOath.new(cult2, follower7, "2019-10-25")
 oath5 = BloodOath.new(cult2, follower1, "2012-07-22")
-oath6 = BloodOath.new(cult5, follower10, "2016-09-12") 
+oath6 = BloodOath.new(cult1, follower10, "2016-09-12") 
 oath7 = BloodOath.new(cult1, follower6, "2018-06-24")
 oath8 = BloodOath.new(cult4, follower4, "2015-04-13")
 oath9 = BloodOath.new(cult4, follower5, "2020-03-16")
 oath10 = BloodOath.new(cult3, follower9, "2014-11-09")
 
 
-cult1.recruit_follower(follower5)
+# cult1.recruit_follower(follower5)
 
 binding.pry
 end_of_bloodoath = "game over"
