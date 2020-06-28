@@ -14,4 +14,20 @@ class Follower
         @@all
     end
 
+    def cults
+        result = []
+        BloodOath.all.each { |oath| oath.follower == self ? result << oath.cult.name : nil }
+        result
+    end
+
+    def join_cult(cult)
+        BloodOath.new(cult, self)
+    end
+
+    def self.of_a_certain_age(age)
+        result = []
+        Follower.all.each { |follower| follower.age >= age ? result << follower.name : nil }    
+        result
+    end
+
 end
