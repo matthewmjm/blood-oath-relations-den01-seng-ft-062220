@@ -49,17 +49,28 @@ class Cult
         BloodOath.all.each { |oath| oath.cult == self ? (p oath.follower.life_motto) : nil}
     end
 
+    # def self.least_popular
+    #     result = BloodOath.all.map { |oath| oath.cult }
+    #     final_result = result.reduce(Hash.new(0)) { |hash, value| hash[value] += 1; hash} 
+    #     result.min_by { |value| final_result[value]  }
+    # end
+
     def self.least_popular
         result = BloodOath.all.map { |oath| oath.cult }
-        final_result = result.reduce(Hash.new(0)) { |hash, value| hash[value] += 1; hash} 
-        result.min_by { |value| final_result[value]  }
+        result.min_by {|i| result.count(i)}
     end
+
+    # def self.most_common_location
+    #     result = Cult.all.map { |cult| cult.location }
+    #     final_result = result.reduce(Hash.new(0)) { |hash, value| hash[value] += 1; hash} 
+    #     result.max_by { |value| final_result[value]  }
+    # end
 
     def self.most_common_location
         result = Cult.all.map { |cult| cult.location }
-        final_result = result.reduce(Hash.new(0)) { |hash, value| hash[value] += 1; hash} 
-        result.max_by { |value| final_result[value]  }
+        result.max_by {|i| result.count(i)}
     end
+
 
 
 end
