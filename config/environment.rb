@@ -38,6 +38,7 @@ oath7 = BloodOath.new(cult1, follower6, '2018-06-24')
 oath8 = BloodOath.new(cult4, follower4, '2015-04-13')
 oath9 = BloodOath.new(cult4, follower5, '2020-03-16')
 oath10 = BloodOath.new(cult3, follower9, '2014-11-09')
+oath11 = BloodOath.new(cult2, follower9, '2015-12-05')
 
 binding.pry
 end_of_bloodoath = 'game over'
