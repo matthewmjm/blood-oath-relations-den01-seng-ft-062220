@@ -55,9 +55,14 @@ class Cult
     #     result.min_by { |value| final_result[value]  }
     # end
 
+    # def self.least_popular
+    #     result = BloodOath.all.map { |oath| oath.cult }
+    #     result.min_by {|i| result.count(i)}
+    # end
+
     def self.least_popular
-        result = BloodOath.all.map { |oath| oath.cult }
-        result.min_by {|i| result.count(i)}
+        # BloodOath.all.reduce { |least, current| (least.cult_population.self < current.cult_population.self) ? least : current }
+        BloodOath.all.reduce  { |a, b| (a.self.population < b.self.population) ? a : b }
     end
 
     # def self.most_common_location
@@ -65,6 +70,7 @@ class Cult
     #     final_result = result.reduce(Hash.new(0)) { |hash, value| hash[value] += 1; hash} 
     #     result.max_by { |value| final_result[value]  }
     # end
+
 
     def self.most_common_location
         result = Cult.all.map { |cult| cult.location }
